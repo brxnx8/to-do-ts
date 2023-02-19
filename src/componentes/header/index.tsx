@@ -45,7 +45,7 @@ export function Header(props: PropsHeader) {
                     height="26"
                     onClick={ChangeTheme}
                 >
-                    <path fill="#FFF" fill-rule="evenodd" d={image} />
+                    <path fill="#FFF" fillRule="evenodd" d={image} />
                 </svg>
             </DivSColored>
         </ThemeProvider>

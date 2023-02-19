@@ -38,7 +38,10 @@ export function InputText(props: PropsInputText) {
                     value={newTaskText}
                     placeholder="Adicione uma nova tarefa"
                 />
-                <ButtonColored disabled={newTaskText === ""} id={style.button}>
+                <ButtonColored
+                    disabled={newTaskText.length === 0 || !newTaskText.trim()}
+                    id={style.button}
+                >
                     Criar
                 </ButtonColored>
             </form>
