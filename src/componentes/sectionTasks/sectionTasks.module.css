@@ -1,0 +1,14 @@
+.sectionTask {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+.divLabels {
+    display: flex;
+    justify-content: space-between;
+}
+.containerEmpty {
+    padding: 4rem 0;
+
+    color: rgb(107, 107, 107);
+}
