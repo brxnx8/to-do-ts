@@ -8,6 +8,13 @@ import imagem from "../../images/book.png";
 interface PropsSectionTask {
     tasks: Array<string>;
     removeTask: (tasks: Array<string>) => void;
+    theme: {
+        primary: string;
+        secundary: string;
+        button: string;
+        task: string;
+        font: string;
+    };
 }
 
 export function SectionTask(props: PropsSectionTask) {
@@ -31,8 +38,13 @@ export function SectionTask(props: PropsSectionTask) {
                 <Label
                     text="Tarefas Criadas"
                     CounterTasks={props.tasks.length}
+                    theme={props.theme}
                 />
-                <Label text="Concluidas" CounterTasks={tasksCompleted} />
+                <Label
+                    text="Concluidas"
+                    CounterTasks={tasksCompleted}
+                    theme={props.theme}
+                />
             </div>
             <div className={style.divContainerTasks}>
                 {props.tasks.length > 0 ? (
@@ -43,6 +55,7 @@ export function SectionTask(props: PropsSectionTask) {
                                 key={task}
                                 isCompleted={taskIsCompleted}
                                 removeTask={removeTask}
+                                theme={props.theme}
                             />
                         );
                     })

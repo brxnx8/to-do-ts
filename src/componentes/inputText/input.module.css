@@ -10,8 +10,6 @@
     width: 90%;
     padding: 0.6rem;
 
-    background-color: #1a5b78;
-
     font-weight: 600;
 
     border: 1px solid black;
@@ -26,8 +24,6 @@
     width: 70px;
     padding: 0.6rem;
 
-    background-color: #0c2e45;
-    color: #2bbec8;
     font-weight: 800;
 
     border: 1px solid black;
@@ -36,9 +32,9 @@
 
     cursor: pointer;
 }
-.formAddTask > button:disabled {
-    background-color: #0c2e45c4;
-    color: #2bbdc877;
+#button:disabled {
+    color: #1a1a1a75;
+    background-color: rgb(56, 56, 56);
 
     cursor: not-allowed;
 }

@@ -7,8 +7,6 @@
 
     margin-bottom: 0.5rem;
 
-    background-color: rgb(107, 107, 107);
-
     border-radius: 4px;
 }
 .task > p {
@@ -35,8 +33,8 @@
     cursor: pointer;
 }
 
-.riscado {
+#riscado {
     text-decoration: line-through;
-    color: #2bbdc875;
+    color: #1a1a1a75;
     background-color: rgb(56, 56, 56);
 }

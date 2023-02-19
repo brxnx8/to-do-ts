@@ -4,9 +4,18 @@ import { Header } from "./componentes/header";
 import { InputText } from "./componentes/inputText";
 import { SectionTask } from "./componentes/sectionTasks";
 import { useState } from "react";
+import { ThemeProvider } from "styled-components";
+import { DarkTheme, LightTheme } from "./styles/themes/themes";
+import { DivPColored } from "./styles/componentsColor/DivPrimary.styles";
 
 function App() {
     const [tasks, setTasks] = useState(Array<string>);
+
+    const [theme, setTheme] = useState(LightTheme);
+
+    function ChangeTheme(bool: string) {
+        setTheme(bool === "dark" ? DarkTheme : LightTheme);
+    }
 
     const addNewTask = (newTask: string) => {
         if (!tasks.includes(newTask)) {
@@ -17,16 +26,17 @@ function App() {
     };
 
     return (
-        <div className="App">
-            <Header />
-            <main className="section-main">
-                <InputText addNewTask={addNewTask} />
+        <ThemeProvider theme={theme}>
+            <Header ChangeTheme={ChangeTheme} theme={theme} />
+            <DivPColored className="section-main">
+                <InputText addNewTask={addNewTask} theme={theme} />
                 <SectionTask
                     tasks={tasks}
                     removeTask={(tasks: Array<string>) => setTasks(tasks)}
+                    theme={theme}
                 />
-            </main>
-        </div>
+            </DivPColored>
+        </ThemeProvider>
     );
 }
 

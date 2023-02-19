@@ -7,9 +7,7 @@
     font-weight: 700;
     color: #060d18;
 }
-.containerLabel > span {
-    background-color: #0c2e45;
-
+.containerLabel > div {
     padding: 0.04rem 0.085rem;
     width: 1rem;
     height: 1rem;

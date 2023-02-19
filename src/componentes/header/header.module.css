@@ -1,7 +1,14 @@
 .header {
-    padding: 4rem 0.4rem;
+    padding: 4rem 2rem;
 
-    background-color: #060d18;
+    display: flex;
+    justify-content: right;
+}
 
+.header > h1 {
+    flex: 1;
     text-align: center;
+}
+.header > svg {
+    cursor: pointer;
 }
