@@ -1,4 +1,4 @@
-import { FormEvent, useState } from "react";
+import { ChangeEvent, FormEvent, useState } from "react";
 import { ThemeProvider } from "styled-components";
 import { ButtonColored } from "../../styles/componentsColor/ButtonColored.styles";
 import { InputColored } from "../../styles/componentsColor/input.styles";
@@ -34,7 +34,7 @@ export function InputText(props: PropsInputText) {
             >
                 <InputColored
                     type="text"
-                    onChange={(event) => setNewtaskText(event.target.value)}
+                    onChange={(event: ChangeEvent<HTMLInputElement>) => setNewtaskText(event.target.value)}
                     value={newTaskText}
                     placeholder="Adicione uma nova tarefa"
                 />

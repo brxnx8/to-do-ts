@@ -1,9 +1,6 @@
 import style from "./header.module.css";
-import sol from "../../images/icon-sun.svg";
-import lua from "../../images/icon-moon.svg";
 import { DivSColored } from "../../styles/componentsColor/divSecundary.styles";
 import { ThemeProvider } from "styled-components";
-import { DarkTheme } from "../../styles/themes/themes";
 import { useState } from "react";
 
 interface PropsHeader {
